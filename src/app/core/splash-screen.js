@@ -28,9 +28,24 @@ class SplashScreen {
     /* when it's private (#), it's not accessible from the outside. 
     But within the class we can use it and that's what we're going to do later in the destroy function. 
     So we can still use it inside the class, but not outside. This helps keeping the code less buggy. */
+
+    this.#animate();
   }
 
   destroy() {}
 
-  #animate() {}
+  #animate() {
+    let frame = 1;
+
+    setInterval(() => {
+      this.#splashElement.classList.remove(`splash-screen-${frame}`);
+
+      if (frame >= 2) {
+        frame = 0;
+      }
+
+      frame++;
+      this.#splashElement.classList.add(`splash-screen-${frame}`);
+    }, 500);
+  }
 }
