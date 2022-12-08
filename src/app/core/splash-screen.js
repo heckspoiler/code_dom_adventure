@@ -4,15 +4,23 @@ class SplashScreen {
     const styleElement = document.createElement("style");
     styleElement.innerHTML = `
     .splash-screen {
-      background: url('../assets/splash-screen.jpg');
+      background: url('../assets/splash-screen.jpg') no-repeat;
       width: 650px;
       height: 650px;
+    }
+
+    .splash-screen-1 {
+      background-position-x: 0;
+    }
+
+    .splash-screen-2 {
+      background-position-x: -650px;
     }
     `;
 
     document.head.appendChild(styleElement);
 
-    this.#splashElement.classList.add("splash-screen");
+    this.#splashElement.classList.add("splash-screen", "splash-screen-1");
 
     const rootElement = document.getElementById("root");
 
@@ -23,4 +31,6 @@ class SplashScreen {
   }
 
   destroy() {}
+
+  #animate() {}
 }
