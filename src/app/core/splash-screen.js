@@ -1,5 +1,9 @@
+const MAX_FRAMES = 2;
+const HALF_SECOND = 500;
+
 class SplashScreen {
   #splashElement = document.createElement("div");
+  #animation = null;
   render() {
     const styleElement = document.createElement("style");
     styleElement.innerHTML = `
@@ -32,20 +36,26 @@ class SplashScreen {
     this.#animate();
   }
 
-  destroy() {}
+  destroy() {
+    this.#splashElement.remove();
+    console.log("hurensohn", this.#animation);
+    window.clearInterval(this.#animation);
+  }
 
   #animate() {
     let frame = 1;
 
-    setInterval(() => {
+    const animate = () => {
       this.#splashElement.classList.remove(`splash-screen-${frame}`);
-
-      if (frame >= 2) {
-        frame = 0;
-      }
-
+      console.log("still running");
       frame++;
+
       this.#splashElement.classList.add(`splash-screen-${frame}`);
-    }, 500);
+
+      if (frame > MAX_FRAMES) {
+        frame = 1;
+      }
+    };
+    this.#animation = setInterval(animate, HALF_SECOND);
   }
 }
