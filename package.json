@@ -1,0 +1,23 @@
+{
+  "name": "code_dom_adventure",
+  "version": "1.0.0",
+  "description": "Tutorial from Udemy, creating a browser game with HTML & Javascript by manipulating the DOM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heckspoiler/code_dom_adventure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heckspoiler/code_dom_adventure/issues"
+  },
+  "homepage": "https://github.com/heckspoiler/code_dom_adventure#readme",
+  "devDependencies": {
+    "parcel-bundler": "1.12.4"
+  }
+}
