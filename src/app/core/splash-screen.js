@@ -38,7 +38,6 @@ class SplashScreen {
 
   destroy() {
     this.#splashElement.remove();
-    console.log("hurensohn", this.#animation);
     window.clearInterval(this.#animation);
   }
 
