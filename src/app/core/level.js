@@ -1,7 +1,10 @@
+import "./level.scss";
+import { LevelItem } from "./level-item";
+
 const LEVEL_WIDTH = 13;
 const LEVEL_HEIGHT = 13;
 
-class Level {
+export class Level {
   #columns = [];
   #levelElement = document.createElement("div");
   #rootElement = document.getElementById("root");

@@ -1,0 +1,1 @@
+{"version":3,"sources":["core/level.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,wDAAA;EACA,YAAA;EACA,aAAA","file":"app.c328ef1a.css","sourceRoot":"../src/app","sourcesContent":[".level {\n  display: flex;\n  background: url(\"../assets/game.jpg\");\n  width: 650px;\n  height: 650px;\n}\n"]}
